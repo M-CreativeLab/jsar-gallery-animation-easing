@@ -1,12 +1,9 @@
 const scene = spaceDocument.scene as BABYLON.Scene;
 
 // Torus
-const torus = BABYLON.Mesh.CreateTorus('torus', 8, 2, 32, scene, false);
+const torus = BABYLON.Mesh.CreateTorus('torus', 8, 2, 32, scene, false, BABYLON.Mesh.DEFAULTSIDE);
 torus.position.x = 25;
 torus.position.z = 30;
-
-const materialBox = new BABYLON.StandardMaterial('texture1', scene);
-materialBox.diffuseColor = new BABYLON.Color3(0, 1, 0); //Green
 
 // -----------------------------------------
 // Creation of an easing animation within predefined easing functions
@@ -81,7 +78,6 @@ scene.beginAnimation(bezierTorus, 0, 120, true);
 const torus0 = BABYLON.Mesh.CreateTorus('torus', 8, 2, 32, scene, false);
 torus0.position.x = 25;
 torus0.position.z = -30;
-torus0.material = materialBox;
 
 BABYLON.Animation.CreateAndStartAnimation('anim', torus0, 'position', 30, 120,
   torus0.position, torus0.position.add(new BABYLON.Vector3(-80, 0, 0)));
