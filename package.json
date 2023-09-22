@@ -1,15 +1,14 @@
 {
-  "name": "your-jsar-widget-name",
-  "displayName": "JSAR Display Name",
+  "name": "jsar-gallery-animation-easing",
+  "displayName": "Animation Easing",
   "version": "1.0.0",
-  "description": "The template widget",
+  "description": "The JSAR Widget to demostrate the Babylon's Animation Easing",
   "main": "main.xsml",
   "scripts": {},
   "files": [
     "icon.png",
     "main.xsml",
-    "lib/*.ts",
-    "model/welcome.glb"
+    "lib/*.ts"
   ],
   "icon3d": {
     "base": "./model/welcome.glb"
